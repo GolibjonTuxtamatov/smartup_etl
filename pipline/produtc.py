@@ -1,6 +1,6 @@
 import pandas as pd
 from config import get_headers,ENDPOINTS
-from client import get_raw_data
+from extract import get_raw_data
 
 def run_clean_product() -> pd.DataFrame:
     df_products = get_raw_data(ENDPOINTS['inventory'],'inventory',get_headers())

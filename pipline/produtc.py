@@ -1,6 +1,7 @@
 import pandas as pd
 from config import get_headers,ENDPOINTS
 from extract import get_raw_data
+from load import load_to_supa_base
 
 def run_clean_product() -> pd.DataFrame:
     df_products = get_raw_data(ENDPOINTS['inventory'],'inventory',get_headers())
@@ -23,5 +24,7 @@ def run_clean_product() -> pd.DataFrame:
             df_products[column] = df_products[column].fillna('none')
         elif pd.api.types.is_numeric_dtype(df_products[column]):
             df_products[column] = df_products[column].fillna(0)
+
+    load_to_supa_base(df = df_products,table='products')
 
     return df_product_groups

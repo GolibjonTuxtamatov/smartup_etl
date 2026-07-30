@@ -21,6 +21,8 @@ ENDPOINTS = {
 }
 
 
+
+
 def get_headers() -> dict:
     encode = base64.b64encode(f"{_login}:{_password}".encode()).decode()
 

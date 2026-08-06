@@ -1,6 +1,3 @@
-import requests
-from config import get_headers,ENDPOINTS
+from pipline.produtc import run_clean_product
 
-row = requests.get(ENDPOINTS["inventory"],headers=get_headers())
-
-row.json()
+productGroups = run_clean_product()

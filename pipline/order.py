@@ -114,7 +114,7 @@ def print_text(table):
      print(f"{table} table bo'sh!")
 
 #LOAD
-load_to_supa_base(orders,'orders') if not orders.empty else print_text("order")
+load_to_supa_base(orders,'orders') if not orders.empty else print_text("orders")
 load_to_supa_base(order_items,'order_items') if not order_items.empty else print_text("order_items")
 load_to_supa_base(order_item_details,'order_item_details') if not order_item_details.empty else print_text("order_item_details")
 load_to_supa_base(order_item_action_margins,'order_item_action_margins') if not order_item_action_margins.empty else print_text("order_item_action_margins")

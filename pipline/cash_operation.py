@@ -16,4 +16,4 @@ cash_operation,ref_codes = cleaning_operation(df)
 
 #LOAD
 load_to_supa_base(cash_operation,'cash_operation') if not cash_operation.empty else print_text('cash_operation')
-load_to_supa_base(ref_codes,'ref_codes') if not ref_codes.empty else print_text('ref_codes')
+load_to_supa_base(ref_codes,'cash_ref_codes') if not ref_codes.empty else print_text('cash_ref_codes')
